@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E6FDE721D3304FA005F5363 /* SDTextFieldWithIconFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E6FDE701D3304FA005F5363 /* SDTextFieldWithIconFormCell.xib */; };
+		4E8778161D3438C10051AF19 /* SDTextFieldWithIconFormCell.xib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E6FDE701D3304FA005F5363 /* SDTextFieldWithIconFormCell.xib */; };
 		4EBC370D1D31446900C52F17 /* SDTextFieldWithIconFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC370B1D31446900C52F17 /* SDTextFieldWithIconFormCell.m */; };
 		4EBC370F1D31548200C52F17 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBC370E1D31548200C52F17 /* Media.xcassets */; };
 		4EBC37101D315A2300C52F17 /* SDTextFieldWithIconFormCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC370A1D31446900C52F17 /* SDTextFieldWithIconFormCell.h */; };
@@ -154,6 +155,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				4E8778161D3438C10051AF19 /* SDTextFieldWithIconFormCell.xib in CopyFiles */,
 				4EBC37111D315A4700C52F17 /* SDTextFieldWithIconFormCell.h in CopyFiles */,
 				B52BE29A19AF657E0071BA57 /* SDForms.h in CopyFiles */,
 				B52BE29B19AF657E0071BA57 /* SDFormItemsPickerViewController.h in CopyFiles */,
