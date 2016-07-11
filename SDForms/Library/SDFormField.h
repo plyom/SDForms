@@ -37,6 +37,8 @@ typedef void(^on_value_changed_t)(id originalValue, id newValue, SDFormField *fi
 
 @property (nonatomic, strong) NSString *title;                  ///<Title of the field that will be displayed in cell
 
+@property (nonatomic, strong) UIImage *icon;                  ///<Title of the field that will be displayed in cell
+
 @property (nonatomic, strong) id value;                         ///<Value of the field
 
 @property (nonatomic) SDFormFieldValueType valueType;           ///<Type of the value

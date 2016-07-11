@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "SDFormField.h"
 
-typedef enum {SDTextFormFieldCellTypeTextOnly, SDTextFormFieldCellTypeTextAndLabel} SDTextFormFieldCellType;
+typedef enum {SDTextFormFieldCellTypeTextOnly, SDTextFormFieldCellTypeTextAndLabel, SDTextFormFieldCellTypeIconAndText} SDTextFormFieldCellType;
 
 @interface SDTextFormField : SDFormField
 
 @property (nonatomic, strong) NSString *placeholder;
+@property (nonatomic, strong) UIColor *textColor;
+@property (nonatomic, strong) UIColor *enabledIconColor;
+@property (nonatomic, strong) UIColor *disabledIconColor;
 @property (nonatomic) UITextAutocapitalizationType autocapitalizationType;
 @property (nonatomic) UITextAutocorrectionType autocorrectionType;
 @property (nonatomic) BOOL secure;

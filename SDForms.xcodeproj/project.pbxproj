@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E6FDE721D3304FA005F5363 /* SDTextFieldWithIconFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E6FDE701D3304FA005F5363 /* SDTextFieldWithIconFormCell.xib */; };
+		4EBC370D1D31446900C52F17 /* SDTextFieldWithIconFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC370B1D31446900C52F17 /* SDTextFieldWithIconFormCell.m */; };
+		4EBC370F1D31548200C52F17 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBC370E1D31548200C52F17 /* Media.xcassets */; };
+		4EBC37101D315A2300C52F17 /* SDTextFieldWithIconFormCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC370A1D31446900C52F17 /* SDTextFieldWithIconFormCell.h */; };
+		4EBC37111D315A4700C52F17 /* SDTextFieldWithIconFormCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4EBC370A1D31446900C52F17 /* SDTextFieldWithIconFormCell.h */; };
 		90088FA2801156D2DFE542C7 /* libPods-SDFormsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F1ED209A3ECF103A1965F2 /* libPods-SDFormsTests.a */; };
 		B5183A0819C9CEAA00A9B858 /* NSMutableDictionary+SDExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5183A0719C9CEAA00A9B858 /* NSMutableDictionary+SDExtensions.m */; };
 		B5183A0A19C9D7DC00A9B858 /* SDLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5183A0919C9D7DC00A9B858 /* SDLaunchScreen.xib */; };
@@ -149,6 +154,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				4EBC37111D315A4700C52F17 /* SDTextFieldWithIconFormCell.h in CopyFiles */,
 				B52BE29A19AF657E0071BA57 /* SDForms.h in CopyFiles */,
 				B52BE29B19AF657E0071BA57 /* SDFormItemsPickerViewController.h in CopyFiles */,
 				B52BE29C19AF657E0071BA57 /* SDDatePickerField.h in CopyFiles */,
@@ -198,6 +204,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E6FDE701D3304FA005F5363 /* SDTextFieldWithIconFormCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDTextFieldWithIconFormCell.xib; sourceTree = "<group>"; };
+		4EBC370A1D31446900C52F17 /* SDTextFieldWithIconFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTextFieldWithIconFormCell.h; sourceTree = "<group>"; };
+		4EBC370B1D31446900C52F17 /* SDTextFieldWithIconFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTextFieldWithIconFormCell.m; sourceTree = "<group>"; };
+		4EBC370E1D31548200C52F17 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		4FF94D8A4C0A743B359A8BE4 /* Pods-SDFormsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDFormsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDFormsTests/Pods-SDFormsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5183A0619C9CEAA00A9B858 /* NSMutableDictionary+SDExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+SDExtensions.h"; sourceTree = "<group>"; };
 		B5183A0719C9CEAA00A9B858 /* NSMutableDictionary+SDExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+SDExtensions.m"; sourceTree = "<group>"; };
@@ -534,6 +544,9 @@
 				B596CB24199B95DC000AB3A5 /* SDTextViewFormCell.h */,
 				B596CB25199B95DC000AB3A5 /* SDTextViewFormCell.m */,
 				B596CB26199B95DC000AB3A5 /* SDTextViewFormCell.xib */,
+				4EBC370A1D31446900C52F17 /* SDTextFieldWithIconFormCell.h */,
+				4EBC370B1D31446900C52F17 /* SDTextFieldWithIconFormCell.m */,
+				4E6FDE701D3304FA005F5363 /* SDTextFieldWithIconFormCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -575,6 +588,7 @@
 				B5F8764419AE1BAB00C4AF33 /* Main.storyboard */,
 				B5F8764619AE1BAB00C4AF33 /* InfoPlist.strings */,
 				B5F8764819AE1BAB00C4AF33 /* Images.xcassets */,
+				4EBC370E1D31548200C52F17 /* Media.xcassets */,
 				B5F8764919AE1BAB00C4AF33 /* main.m */,
 				B5F8764A19AE1BAB00C4AF33 /* SDAppDelegate.h */,
 				B5F8764B19AE1BAB00C4AF33 /* SDAppDelegate.m */,
@@ -638,11 +652,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5E000091AC2F6C2000E13CB /* Build configuration list for PBXNativeTarget "SDFormsTests" */;
 			buildPhases = (
-				629042D14BB2C664CFBC4966 /* Check Pods Manifest.lock */,
+				629042D14BB2C664CFBC4966 /* [CP] Check Pods Manifest.lock */,
 				B5E0FFFC1AC2F6C2000E13CB /* Sources */,
 				B5E0FFFD1AC2F6C2000E13CB /* Frameworks */,
 				B5E0FFFE1AC2F6C2000E13CB /* Resources */,
-				93DDA1F84B1A7CD12496AD4A /* Copy Pods Resources */,
+				93DDA1F84B1A7CD12496AD4A /* [CP] Copy Pods Resources */,
+				1432E5D10D9574BB1A310065 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -719,6 +734,7 @@
 				B55F0F8819AF418300685BCA /* SDButtonFormCell.xib in Resources */,
 				B55F0F8A19AF418300685BCA /* SDDatePickerFormCell.xib in Resources */,
 				B55F0F8B19AF418300685BCA /* SDDatePickerWithLabelFormCell.xib in Resources */,
+				4E6FDE721D3304FA005F5363 /* SDTextFieldWithIconFormCell.xib in Resources */,
 				B55F0F8E19AF418300685BCA /* SDPickerFormCell.xib in Resources */,
 				B55F0F8F19AF418300685BCA /* SDLabelFormCell.xib in Resources */,
 				B55F0F9119AF418300685BCA /* SDTextFieldWithLabelFormCell.xib in Resources */,
@@ -738,6 +754,7 @@
 				B558865A19B755750082CCF9 /* SDFormsResources.bundle in Resources */,
 				B5F876A919AE1ED100C4AF33 /* Main.storyboard in Resources */,
 				B5F8765119AE1BAB00C4AF33 /* InfoPlist.strings in Resources */,
+				4EBC370F1D31548200C52F17 /* Media.xcassets in Resources */,
 				B5F8765219AE1BAB00C4AF33 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -752,14 +769,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		629042D14BB2C664CFBC4966 /* Check Pods Manifest.lock */ = {
+		1432E5D10D9574BB1A310065 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDFormsTests/Pods-SDFormsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		629042D14BB2C664CFBC4966 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -767,14 +799,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		93DDA1F84B1A7CD12496AD4A /* Copy Pods Resources */ = {
+		93DDA1F84B1A7CD12496AD4A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -815,6 +847,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EBC37101D315A2300C52F17 /* SDTextFieldWithIconFormCell.h in Sources */,
 				B59132111A6038500028FBE7 /* NSObject+Differences.m in Sources */,
 				B5F876A319AE1E5B00C4AF33 /* SDForm.m in Sources */,
 				B5F876A419AE1E5B00C4AF33 /* SDFormSection.m in Sources */,
@@ -833,6 +866,7 @@
 				B55F0F1F19AF2F0B00685BCA /* SDSwitchField.m in Sources */,
 				B5F876A019AE1E4D00C4AF33 /* SDSwitchFormCell.m in Sources */,
 				B5F876A119AE1E4D00C4AF33 /* SDTextFieldFormCell.m in Sources */,
+				4EBC370D1D31446900C52F17 /* SDTextFieldWithIconFormCell.m in Sources */,
 				B5F876A219AE1E4D00C4AF33 /* SDTextViewFormCell.m in Sources */,
 				B55F0F1819AF0F9C00685BCA /* SDButtonField.m in Sources */,
 				B5F8768A19AE1E2B00C4AF33 /* UIColor+HexColor.m in Sources */,

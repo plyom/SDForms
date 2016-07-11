@@ -9,8 +9,9 @@
 #import "SDTextFormField.h"
 #import "SDTextFieldFormCell.h"
 #import "SDTextFieldWithLabelFormCell.h"
+#import "SDTextFieldWithIconFormCell.h"
 
-@implementation SDTextFormField
+@implementation SDTextFormField 
 
 - (id)init
 {
@@ -21,6 +22,9 @@
         self.secure = NO;
         self.enabled = YES;
         self.cellType = SDTextFormFieldCellTypeTextOnly;
+        self.textColor = [UIColor blackColor];
+        self.enabledIconColor = [UIColor blackColor];
+        self.disabledIconColor = [UIColor blackColor];
     }
     return self;
 }
@@ -31,6 +35,8 @@
         cellId = kTextFieldCell;
     } else if (self.cellType == SDTextFormFieldCellTypeTextAndLabel) {
         cellId = kTextFieldWithLabelCell;
+    } else if (self.cellType == SDTextFormFieldCellTypeIconAndText) {
+        cellId = kTextFieldWithIconCell;
     } else {
         cellId = kTextFieldCell;
     }
@@ -67,7 +73,20 @@
             tfWithLabelCell.titleLabel.text = self.title;
         }
         
+        
+        if ([cell isKindOfClass:[SDTextFieldWithIconFormCell class]]) {
+            SDTextFieldWithIconFormCell *tfWithIconCell = (SDTextFieldWithIconFormCell *)cell;
+            UIImage *newImage = [self.icon imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+            if ([textFieldCell.textField.text length] > 0) {
+                tfWithIconCell.iconView.tintColor = self.enabledIconColor;
+            }else {
+                tfWithIconCell.iconView.tintColor = self.disabledIconColor;
+            }
+            tfWithIconCell.iconView.image = newImage;
+        }
+        
         textFieldCell.enabled = self.enabled;
+        textFieldCell.textField.textColor = self.textColor;
         textFieldCell.textField.placeholder = self.placeholder;
         textFieldCell.textField.autocapitalizationType = self.autocapitalizationType;
         textFieldCell.textField.autocorrectionType = self.autocorrectionType;
@@ -76,5 +95,6 @@
     
     return cell;
 }
+
 
 @end

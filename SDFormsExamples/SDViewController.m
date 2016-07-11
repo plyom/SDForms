@@ -41,7 +41,7 @@
 
 @end
 
-@interface SDViewController () <SDFormFieldCustomizationDelegate, SDFormDelegate, SDFormDataSource>
+@interface SDViewController () <SDFormFieldCustomizationDelegate, SDFormFieldDelegate, SDFormDelegate, SDFormDataSource, UITextFieldDelegate>
 
 @property (nonatomic, strong) SDForm *form;
 @property (nonatomic, strong) Person *person;
@@ -146,6 +146,16 @@
     return nil;
 }
 
+#pragma mark - SDFormFieldDelegate
+
+- (void)formFieldDidUpdateValue:(SDFormField *)field
+{
+    if([field.title isEqualToString:@"Name"]) {
+        NSLog(@"Value Field %@", field.value);
+//        ((SDTextFormField*)field).text
+    }
+}
+
 #pragma mark - SDForm delegate & data source
 
 - (UIViewController *)viewControllerForForm:(SDForm *)form
@@ -238,9 +248,13 @@
     self.sections = [NSMutableArray array];
     
     SDTextFormField *name = [[SDTextFormField alloc] initWithObject:self.person relatedPropertyKey:@"name"];
-    name.title = @"Name";
+    name.icon = [UIImage imageNamed:@"tophat"];
     name.placeholder = @"Name";
-    name.cellType = SDTextFormFieldCellTypeTextAndLabel;
+    name.title = @"Name";
+    name.textColor = [UIColor blueColor];
+    name.enabledIconColor = [UIColor blueColor];
+    name.disabledIconColor = [UIColor grayColor];
+    name.cellType = SDTextFormFieldCellTypeIconAndText;
     
     SDTextFormField *surname = [[SDTextFormField alloc] initWithObject:self.person relatedPropertyKey:@"surname"];
     surname.title = @"Surname";
