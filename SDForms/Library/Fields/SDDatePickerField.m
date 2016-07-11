@@ -22,6 +22,8 @@ static NSString * const kDefaultDateFormat = @"yyyy-MM-dd HH:mm:ss";
     if (self) {
         _hasPicker = YES;
         _datePickerMode = UIDatePickerModeDateAndTime;
+        self.maxDate = [NSDate date];
+        self.textColor = [UIColor blackColor];
     }
     return self;
 }
@@ -41,6 +43,7 @@ static NSString * const kDefaultDateFormat = @"yyyy-MM-dd HH:mm:ss";
         SDLabelFormCell *labelCell = (SDLabelFormCell *)cell;
         labelCell.titleLabel.text = self.title;
         labelCell.valueLabel.text = self.formattedValue;
+        labelCell.valueLabel.textColor = self.textColor;
     } else if ([cell isKindOfClass:[SDDatePickerFormCell class]]) {
         SDDatePickerFormCell *datePickerCell = (SDDatePickerFormCell *)cell;
         if (self.timeZone) {
@@ -48,6 +51,7 @@ static NSString * const kDefaultDateFormat = @"yyyy-MM-dd HH:mm:ss";
         }
         
         datePickerCell.datePicker.datePickerMode = self.datePickerMode;
+        datePickerCell.datePicker.maximumDate = self.maxDate;
         
         if (self.value) {
             [datePickerCell.datePicker setDate:self.value animated:NO];

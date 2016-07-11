@@ -280,6 +280,7 @@
     sex.relatedObjects = @[self.person];
     sex.relatedPropertyKeys = @[@"sex"];
     [sex selectItem:1 inComponent:0];
+    sex.textColor = [UIColor redColor];
     
     SDTextFormField *salary = [[SDTextFormField alloc] initWithObject:self.person relatedPropertyKey:@"salary"];
     salary.placeholder = @"Salary";
@@ -298,6 +299,7 @@
     dob.title = @"Date of birth";
     dob.value = [NSDate date];
     dob.datePickerMode = UIDatePickerModeDateAndTime;
+    dob.textColor = [UIColor greenColor];
     
     SDSliderField *hp = [[SDSliderField alloc] initWithObject:self.person relatedPropertyKey:@"hp"];
     hp.title = @"HP";

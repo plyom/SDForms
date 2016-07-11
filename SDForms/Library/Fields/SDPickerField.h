@@ -31,6 +31,7 @@ typedef enum {SDPickerFieldPickerTypeInRow, SDPickerFieldPickerTypeInView} SDPic
 @property (nonatomic, strong) NSArray *items;   ///< Array of arrays of items. For each component contains array of its items. Items should be of NSString type
 @property (nonatomic, strong) NSArray *values; ///< Array of arrays of values. For each component contains array of its values. Values can be of any object type
 @property (nonatomic, strong) NSArray *value; ///< Array of selected values in all components
+@property (nonatomic, strong) UIColor *textColor;
 @property (nonatomic, readonly) NSArray *formattedValue; ///< Array of formatted values for all components
 @property (nonatomic, strong) NSArray *relatedObjects;  ///< Array of field's related objects
 @property (nonatomic, strong) NSArray *relatedPropertyKeys; ///< Array of key paths to related objects' properties related to the field

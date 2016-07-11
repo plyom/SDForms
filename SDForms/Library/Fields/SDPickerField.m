@@ -25,6 +25,7 @@
     if (self) {
         self.hasPicker = YES;
         self.pickerType = SDPickerFieldPickerTypeInRow;
+        self.textColor = [UIColor blackColor];
     }
     return self;
 }
@@ -94,6 +95,7 @@ settableFormattedValueKeys:(NSArray *)settableFormattedKeys
         } else {
             labelCell.valueLabel.text = self.formattedValue.firstObject;
         }
+        labelCell.valueLabel.textColor = self.textColor;
     } else if ([cell isKindOfClass:[SDPickerFormCell class]]) {
         SDPickerFormCell *pickerCell = (SDPickerFormCell *)cell;
         pickerCell.picker.delegate = self;
