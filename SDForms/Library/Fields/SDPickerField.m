@@ -175,7 +175,7 @@ settableFormattedValueKeys:(NSArray *)settableFormattedKeys
 {
     [self validateItemsArray:items];
     _items = items;
-    [self validateValuesArray:self.values];
+//    [self validateValuesArray:self.values];
     [self setValueBasedOnRelatedObjectProperty];
 }
 
