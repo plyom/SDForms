@@ -23,6 +23,7 @@
         self.enabled = YES;
         self.cellType = SDTextFormFieldCellTypeTextOnly;
         self.textColor = [UIColor blackColor];
+        self.labelColor = [UIColor blackColor];
         self.enabledIconColor = [UIColor blackColor];
         self.disabledIconColor = [UIColor blackColor];
         self.textFont = NULL;
@@ -72,6 +73,7 @@
         if ([cell isKindOfClass:[SDTextFieldWithLabelFormCell class]]) {
             SDTextFieldWithLabelFormCell *tfWithLabelCell = (SDTextFieldWithLabelFormCell *)cell;
             tfWithLabelCell.titleLabel.text = self.title;
+            tfWithLabelCell.titleLabel.textColor = self.labelColor;
             if (self.textFont != NULL) {
                 tfWithLabelCell.titleLabel.font = self.textFont;
             }

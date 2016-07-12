@@ -11,7 +11,9 @@
 @interface SDDatePickerField : SDFormField
 
 @property (nonatomic, strong) NSDate *maxDate;
+@property (nonatomic, strong) UIColor *labelColor;
 @property (nonatomic, strong) UIColor *textColor;
+@property (nonatomic, strong) UIFont *textFont;
 @property (nonatomic, strong) NSString *dateFormat;
 @property (nonatomic, strong) NSTimeZone *timeZone;
 @property (nonatomic) UIDatePickerMode datePickerMode;
