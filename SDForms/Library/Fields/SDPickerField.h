@@ -15,6 +15,7 @@ typedef enum {SDPickerFieldPickerTypeInRow, SDPickerFieldPickerTypeInView} SDPic
 @protocol SDPickerFieldCustomizationDelegate <SDFormFieldCustomizationDelegate>
 
 - (NSString *)formattedValueForField:(SDPickerField *)field inComponent:(NSInteger)component;
+- (void)didSelectPickerField:(SDPickerField *)field;
 
 @end
 
