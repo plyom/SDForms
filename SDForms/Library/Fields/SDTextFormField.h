@@ -15,6 +15,7 @@ typedef enum {SDTextFormFieldCellTypeTextOnly, SDTextFormFieldCellTypeTextAndLab
 
 @property (nonatomic, strong) NSString *placeholder;
 @property (nonatomic, strong) UIColor *textColor;
+@property (nonatomic, strong) UIFont *textFont;
 @property (nonatomic, strong) UIColor *enabledIconColor;
 @property (nonatomic, strong) UIColor *disabledIconColor;
 @property (nonatomic) UITextAutocapitalizationType autocapitalizationType;

@@ -25,6 +25,7 @@
         self.textColor = [UIColor blackColor];
         self.enabledIconColor = [UIColor blackColor];
         self.disabledIconColor = [UIColor blackColor];
+        self.textFont = NULL;
     }
     return self;
 }
@@ -71,6 +72,9 @@
         if ([cell isKindOfClass:[SDTextFieldWithLabelFormCell class]]) {
             SDTextFieldWithLabelFormCell *tfWithLabelCell = (SDTextFieldWithLabelFormCell *)cell;
             tfWithLabelCell.titleLabel.text = self.title;
+            if (self.textFont != NULL) {
+                tfWithLabelCell.titleLabel.font = self.textFont;
+            }
         }
         
         
@@ -91,6 +95,14 @@
         textFieldCell.textField.autocapitalizationType = self.autocapitalizationType;
         textFieldCell.textField.autocorrectionType = self.autocorrectionType;
         textFieldCell.textField.secureTextEntry = self.secure;
+        
+        if (self.textFont != NULL) {
+            textFieldCell.textLabel.font = self.textFont;
+            textFieldCell.textField.font = self.textFont;
+            textFieldCell.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{
+              NSFontAttributeName : self.textFont
+            }];
+        }
     }
     
     return cell;

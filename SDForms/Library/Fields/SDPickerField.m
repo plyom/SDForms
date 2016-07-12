@@ -26,6 +26,7 @@
         self.hasPicker = YES;
         self.pickerType = SDPickerFieldPickerTypeInRow;
         self.textColor = [UIColor blackColor];
+        self.textFont = NULL;
     }
     return self;
 }
@@ -96,6 +97,10 @@ settableFormattedValueKeys:(NSArray *)settableFormattedKeys
             labelCell.valueLabel.text = self.formattedValue.firstObject;
         }
         labelCell.valueLabel.textColor = self.textColor;
+        if (self.textFont != NULL) {
+            labelCell.titleLabel.font = self.textFont;
+            labelCell.valueLabel.font = self.textFont;
+        }
     } else if ([cell isKindOfClass:[SDPickerFormCell class]]) {
         SDPickerFormCell *pickerCell = (SDPickerFormCell *)cell;
         pickerCell.picker.delegate = self;

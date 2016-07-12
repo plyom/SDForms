@@ -281,6 +281,7 @@
     sex.relatedPropertyKeys = @[@"sex"];
     [sex selectItem:1 inComponent:0];
     sex.textColor = [UIColor redColor];
+    sex.textFont = [UIFont fontWithName:@"GillSans-LightItalic" size:20.f];
     
     SDTextFormField *salary = [[SDTextFormField alloc] initWithObject:self.person relatedPropertyKey:@"salary"];
     salary.placeholder = @"Salary";

@@ -15,7 +15,7 @@ SDForms is an open source iOS forms library that allows to create dynamic UITabl
 ## CocoaPods
 
 ```
-pod 'SDForms', :git => 'https://github.com/SnowdogApps/SDForms.git'
+pod 'SDForms', :git => 'https://github.com/plyom/SDForms.git'
 ```
 
 ## Usage
