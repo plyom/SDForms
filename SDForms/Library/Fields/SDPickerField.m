@@ -500,7 +500,6 @@ settableFormattedValueKeys:(NSArray *)settableFormattedKeys
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     [self selectItem:row inComponent:component];
-    [self.formatDelegate respondsToSelector:@selector(didSelectPickerField:)];
 }
 
 
