@@ -56,10 +56,13 @@
         if (self.valueType == SDFormFieldValueTypeText) {
             textFieldCell.textField.keyboardType = UIKeyboardTypeDefault;
             textFieldCell.textField.text = self.value;
+        } else if (self.valueType == SDFormFieldValueTypeCep || self.valueType ==  SDFormFieldValueTypeNumberText || self.valueType == SDFormFieldValueTypePhone) {
+            textFieldCell.textField.keyboardType = UIKeyboardTypeNumberPad;
+            textFieldCell.textField.text = self.value;
         } else {
             if (self.valueType == SDFormFieldValueTypeDouble) {
                 textFieldCell.textField.keyboardType = UIKeyboardTypeDecimalPad;
-            } else if (self.valueType == SDFormFieldValueTypeInt || self.valueType == SDFormFieldValueTypeCep || self.valueType ==  SDFormFieldValueTypeNumberText || self.valueType == SDFormFieldValueTypePhone) {
+            } else if (self.valueType == SDFormFieldValueTypeInt) {
                 textFieldCell.textField.keyboardType = UIKeyboardTypeNumberPad;
             } else {
                 textFieldCell.textField.keyboardType = UIKeyboardTypeDefault;
