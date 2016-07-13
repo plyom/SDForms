@@ -62,6 +62,7 @@
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, weak) id<SDFormDelegate> delegate;
 @property (nonatomic, weak) id<SDFormDataSource> dataSource;
+@property (strong, nonatomic) SDFormKeyboardToolbar *toolbar;
 
 @end
 

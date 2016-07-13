@@ -15,7 +15,6 @@
 
 @interface SDForm ()
 
-@property (strong, nonatomic) SDFormKeyboardToolbar *toolbar;
 @property (nonatomic) CGFloat prevOffset;
 @property (nonatomic) CGRect prevFrame;
 @property (nonatomic, strong) NSIndexPath *currentIndexPath;

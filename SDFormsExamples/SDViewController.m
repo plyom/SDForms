@@ -83,6 +83,10 @@
     self.form = [[SDForm alloc] initWithTableView:self.tableView];
     self.form.delegate = self;
     self.form.dataSource = self;
+    self.form.toolbar.previousButton.title = @"<";
+    self.form.toolbar.nextButton.title = @">";
+    self.form.toolbar.hideButton.title = @"Pronto";
+    self.form.toolbar.tintColor = [UIColor redColor];
 }
 
 - (void)viewDidLayoutSubviews
