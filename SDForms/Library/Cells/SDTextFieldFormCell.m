@@ -68,7 +68,7 @@
 
 - (void)setFieldValueFromTextField:(UITextField *)textField withCellRefresh:(BOOL)refresh
 {
-    if (self.field.valueType == SDFormFieldValueTypeText) {
+    if (self.field.valueType == SDFormFieldValueTypeText || self.field.valueType ==  SDFormFieldValueTypeNumberText) {
         [self.field setValue:textField.text withCellRefresh:refresh];
     } else if (self.field.valueType == SDFormFieldValueTypeDouble || self.field.valueType == SDFormFieldValueTypeInt) {
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
@@ -79,8 +79,12 @@
         [textField.text substringWithRange:NSMakeRange(0, 5)],
         [textField.text substringWithRange:NSMakeRange(6, 3)]];
         [self.field setValue:formattedText withCellRefresh:refresh];
-    } else if (self.field.valueType ==  SDFormFieldValueTypeNumberText) {
-        [self.field setValue:textField.text withCellRefresh:refresh];
+    } else if (self.field.valueType ==  SDFormFieldValueTypePhone) {
+        NSString *formattedText = [NSString stringWithFormat:@"(%@)%@-%@",
+        [textField.text substringWithRange:NSMakeRange(1, 2)],
+        [textField.text substringWithRange:NSMakeRange(4, 4)],
+        [textField.text substringWithRange:NSMakeRange(9, 10)]];
+        [self.field setValue:formattedText withCellRefresh:refresh];
     }
 }
 

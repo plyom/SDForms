@@ -59,7 +59,7 @@
         } else {
             if (self.valueType == SDFormFieldValueTypeDouble) {
                 textFieldCell.textField.keyboardType = UIKeyboardTypeDecimalPad;
-            } else if (self.valueType == SDFormFieldValueTypeInt || self.valueType == SDFormFieldValueTypeCep || self.valueType ==  SDFormFieldValueTypeNumberText) {
+            } else if (self.valueType == SDFormFieldValueTypeInt || self.valueType == SDFormFieldValueTypeCep || self.valueType ==  SDFormFieldValueTypeNumberText || self.valueType == SDFormFieldValueTypePhone) {
                 textFieldCell.textField.keyboardType = UIKeyboardTypeNumberPad;
             } else {
                 textFieldCell.textField.keyboardType = UIKeyboardTypeDefault;

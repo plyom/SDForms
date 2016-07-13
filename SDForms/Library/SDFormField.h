@@ -12,7 +12,7 @@
 @class SDFormCell, SDFormField, SDForm;
 
 typedef enum {SDFormFieldPresentingModePush, SDFormFieldPresentingModeModal} SDFormFieldPresentingMode;
-typedef enum {SDFormFieldValueTypeText, SDFormFieldValueTypeDouble, SDFormFieldValueTypeInt, SDFormFieldValueTypeCep, SDFormFieldValueTypeNumberText} SDFormFieldValueType;
+typedef enum {SDFormFieldValueTypeText, SDFormFieldValueTypeDouble, SDFormFieldValueTypeInt, SDFormFieldValueTypeCep, SDFormFieldValueTypePhone, SDFormFieldValueTypeNumberText} SDFormFieldValueType;
 
 @protocol SDFormFieldCustomizationDelegate <NSObject>
 
