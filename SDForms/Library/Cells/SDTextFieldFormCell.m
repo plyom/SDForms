@@ -78,17 +78,17 @@
         if ([textField.text length] > 7) {
             NSString *formattedText = [NSString stringWithFormat:@"%@-%@",
             [textField.text substringWithRange:NSMakeRange(0, 5)],
-            [textField.text substringWithRange:NSMakeRange(6, 3)]];
+            [textField.text substringWithRange:NSMakeRange(5, 3)]];
             [self.field setValue:formattedText withCellRefresh:refresh];
         } else {
             [self.field setValue:textField.text withCellRefresh:refresh];
         }
     } else if (self.field.valueType ==  SDFormFieldValueTypePhone) {
-        if ([textField.text length] > 8) {
+        if ([textField.text length] > 7) {
             NSString *formattedText = [NSString stringWithFormat:@"(%@)%@-%@",
-            [textField.text substringWithRange:NSMakeRange(1, 2)],
-            [textField.text substringWithRange:NSMakeRange(4, 4)],
-            [textField.text substringWithRange:NSMakeRange(9, 5)]];
+            [textField.text substringWithRange:NSMakeRange(0, 2)],
+            [textField.text substringWithRange:NSMakeRange(2, 4)],
+            [textField.text substringWithRange:NSMakeRange(4, [textField.text length] - 6)]];
             [self.field setValue:formattedText withCellRefresh:refresh];
         } else {
             [self.field setValue:textField.text withCellRefresh:refresh];
