@@ -74,6 +74,13 @@
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
         [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
         [self.field setValue:[formatter numberFromString:textField.text] withCellRefresh:refresh];
+    } else if (self.field.valueType == SDFormFieldValueTypeCep) {
+        NSString *formattedText = [NSString stringWithFormat:@"%@-%@",
+        [textField.text substringWithRange:NSMakeRange(0, 5)],
+        [textField.text substringWithRange:NSMakeRange(6, 3)]];
+        [self.field setValue:formattedText withCellRefresh:refresh];
+    } else if (self.field.valueType ==  SDFormFieldValueTypeNumberText) {
+        [self.field setValue:textField.text withCellRefresh:refresh];
     }
 }
 
