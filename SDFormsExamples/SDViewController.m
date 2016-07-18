@@ -14,6 +14,8 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *surname;
 @property (nonatomic, strong) NSString *password;
+@property (nonatomic, strong) NSString *phone;
+@property (nonatomic, strong) NSString *cep;
 @property (nonatomic, strong) NSNumber *age;
 @property (nonatomic, strong) NSNumber *salary;
 @property (nonatomic, strong) NSDate *dateOfBirth;
@@ -57,6 +59,8 @@
         self.person = [[Person alloc] init];
         self.person.name = @"John";
         self.person.surname = @"Smith";
+        self.person.phone = @"";
+        self.person.cep = @"";
         self.person.salary = @3000;
         self.person.dateOfBirth = [[NSDate date] dateByAddingTimeInterval:(3600 * 24 * 365 * 25)];
         self.person.age = @25;
@@ -264,6 +268,17 @@
     surname.placeholder = @"Surname";
     surname.cellType = SDTextFormFieldCellTypeTextAndLabel;
     
+    SDTextFormField *phone = [[SDTextFormField alloc] initWithObject:self.person relatedPropertyKey:@"phone"];
+    phone.title = @"Phone";
+    phone.placeholder = @"Phone";
+    phone.cellType = SDTextFormFieldCellTypeTextAndLabel;
+    phone.valueType = SDFormFieldValueTypePhone;
+    
+    SDTextFormField *postalCode = [[SDTextFormField alloc] initWithObject:self.person relatedPropertyKey:@"cep"];
+    postalCode.title = @"Postal Code";
+    postalCode.placeholder = @"Postal Code";
+    postalCode.valueType = SDFormFieldValueTypeCep;
+    
     SDTextFormField *password = [[SDTextFormField alloc] initWithObject:self.person relatedPropertyKey:@"password"];
     password.placeholder = @"Password";
     password.value = @"P@ssw0rd";
@@ -314,7 +329,7 @@
     SDSwitchField *isStudent = [[SDSwitchField alloc] initWithObject:self.person relatedPropertyKey:@"isStudent"];
     isStudent.title = @"Is student";
     
-    NSArray *section1Fields = [@[name, surname, password, age, sex, salary, label, bio, dob, hp, isStudent] mutableCopy];
+    NSArray *section1Fields = [@[name, surname, phone, postalCode, password, age, sex, salary, label, bio, dob, hp, isStudent] mutableCopy];
     return [section1Fields mutableCopy];
 }
 

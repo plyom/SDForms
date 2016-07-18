@@ -75,6 +75,8 @@
         [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
         [self.field setValue:[formatter numberFromString:textField.text] withCellRefresh:refresh];
     } else if (self.field.valueType == SDFormFieldValueTypeCep) {
+        textField.text = [[textField.text componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
+                                          componentsJoinedByString:@""];
         if ([textField.text length] > 7) {
             NSString *formattedText = [NSString stringWithFormat:@"%@-%@",
             [textField.text substringWithRange:NSMakeRange(0, 5)],
@@ -84,7 +86,9 @@
             [self.field setValue:textField.text withCellRefresh:refresh];
         }
     } else if (self.field.valueType ==  SDFormFieldValueTypePhone) {
-        if ([textField.text length] > 7) {
+        textField.text = [[textField.text componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
+                          componentsJoinedByString:@""];
+        if ([textField.text length] > 9) {
             NSString *formattedText = [NSString stringWithFormat:@"(%@)%@-%@",
             [textField.text substringWithRange:NSMakeRange(0, 2)],
             [textField.text substringWithRange:NSMakeRange(2, 4)],
