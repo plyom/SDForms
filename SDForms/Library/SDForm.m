@@ -648,6 +648,7 @@
 
 - (void)hideKeyboard
 {
+    [self.activeResponder resignFirstResponder];
     self.activeResponder = nil;
 }
 
