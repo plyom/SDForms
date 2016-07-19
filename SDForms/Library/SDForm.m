@@ -687,13 +687,14 @@
 {
     if (_activeResponder != activeResponder)
     {
-        [_activeResponder resignFirstResponder];
+        [_activeResponder performSelector:@selector(resignFirstResponder) withObject:nil afterDelay:0];
         _activeResponder = activeResponder;
         CGPoint pos = [_activeResponder convertPoint:CGPointZero toView:self.tableView];
         self.currentIndexPath = [self.tableView indexPathForRowAtPoint:pos];
         
-        if(!_activeResponder.isFirstResponder)
-            [_activeResponder becomeFirstResponder];
+        if(!_activeResponder.isFirstResponder){
+            [_activeResponder performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0];
+        }
     }
 }
 
